@@ -1,0 +1,11 @@
+rust_library {
+    name: "librustines",
+    crate_name: "rustines",
+    srcs: ["lib.rs"],
+}
+
+rust_binary {
+	name: "binrustines",
+	srcs: ["librustines.rs"],
+	rustlibs: ["librustines"],
+	}
