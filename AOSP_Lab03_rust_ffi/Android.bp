@@ -1,0 +1,13 @@
+rust_ffi {
+    name: "libffi_by_ines",
+    crate_name: "ffi_by_ines",
+    srcs: ["libffi_by_ines.rs"],
+}
+
+rust_binary {
+    name: "my_binary_call_ffi",
+    srcs: ["main.rs"],
+    shared_libs: [
+    	"libffi_by_ines",
+    	],
+}
