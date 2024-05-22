@@ -1,0 +1,14 @@
+cc_library{
+	name:"rust_cpp_lib",
+	srcs:["mylib.cpp"],
+	}
+	
+rust_binary {
+    name: "rust_cpp_bin",
+    srcs: ["main.rs"],
+    rustlibs: ["libcxx"],
+    shared_libs: [
+    	"rust_cpp_lib",
+    	],
+}
+
